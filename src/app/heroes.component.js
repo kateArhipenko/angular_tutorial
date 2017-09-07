@@ -21,7 +21,9 @@ var HeroesComponent = (function () {
         var _this = this;
         this.heroService
             .getHeroes()
-            .then(function (heroes) { return _this.heroes = heroes; });
+            .then(function (heroes) { return _this.heroes = heroes.sort(function (hero1, hero2) {
+            return hero2.score - hero1.score;
+        }); });
     };
     HeroesComponent.prototype.add = function (name) {
         var _this = this;

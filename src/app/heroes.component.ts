@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
+import { Pipe }              from '@angular/core';
 
 import { Hero }                from './hero';
 import { HeroService }         from './hero.service';
@@ -20,7 +21,9 @@ export class HeroesComponent implements OnInit {
   getHeroes(): void {
     this.heroService
         .getHeroes()
-        .then(heroes => this.heroes = heroes);
+        .then(heroes => this.heroes = heroes.sort(function(hero1, hero2){
+            return hero2.score - hero1.score
+        }));
   }
 
   add(name: string): void {

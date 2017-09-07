@@ -64,3 +64,12 @@ button.delete {
   background-color: gray !important;
   color:white;
 }
+.heroes li:nth-child(1) {
+  background-color: green;
+}
+.heroes li:nth-child(2) {
+  background-color: yellow;
+}
+.heroes li:nth-child(3) {
+  background-color: red;
+}

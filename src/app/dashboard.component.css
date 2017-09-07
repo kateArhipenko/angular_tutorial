@@ -59,3 +59,14 @@ h4 {
     min-width: 60px;
   }
 }
+.grid .col-1-4:nth-child(1) .hero{
+  background-color:green;
+}
+.grid .col-1-4:nth-child(2) .hero{
+  background-color:yellow;
+}
+
+.grid .col-1-4:nth-child(3) .hero{
+  background-color:red;
+}
+
